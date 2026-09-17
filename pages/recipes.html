@@ -1,0 +1,256 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MealMate - Recipes</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link href="../src/output.css" rel="stylesheet">
+    <link href="../src/main.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navbar -->
+      <div id="navbar-placeholder"></div>
+<main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-orange-500 via-orange-400 to-yellow-300">
+        <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 py-20 md:grid-cols-2">
+
+            <div>
+                <p class="mb-4 inline-block rounded-full bg-white/25 px-4 py-2 text-sm font-semibold text-white">
+                    Fresh ideas for every meal
+                </p>
+
+                <h1 class="text-4xl font-extrabold leading-tight text-white md:text-6xl">
+                    Discover Your
+                    <span class="text-slate-900">Next Favourite</span>
+                    Recipe
+                </h1>
+
+                <p class="mt-5 max-w-xl text-base leading-8 text-white/90 md:text-lg">
+                    Explore delicious recipes, find easy cooking ideas,
+                    and make every meal special with MealMate.
+                </p>
+
+                <a
+                    href="#recipes"
+                    class="mt-8 inline-block rounded-full bg-slate-900 px-7 py-3 font-semibold text-white transition hover:-translate-y-1 hover:bg-slate-800"
+                >
+                    Explore Recipes
+                </a>
+            </div>
+
+            <div class="overflow-hidden rounded-3xl shadow-2xl">
+                <img
+                    src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1000&q=80"
+                    alt="Healthy food bowl"
+                    class="h-80 w-full object-cover transition duration-700 hover:scale-110 md:h-[430px]"
+                >
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Search and Filters -->
+    <section id="recipes" class="mx-auto max-w-7xl px-5 py-14">
+
+        <div class="mb-10 text-center">
+            <p class="font-semibold uppercase tracking-widest text-orange-500">
+                Recipe Collection
+            </p>
+
+            <h2 class="mt-2 text-3xl font-extrabold md:text-4xl">
+                Find Something Delicious
+            </h2>
+
+            <p class="mx-auto mt-3 max-w-2xl text-slate-500">
+                Search recipes or choose a category to discover your next meal.
+            </p>
+        </div>
+
+        <!-- Search Box -->
+        <div class="mx-auto mb-6 max-w-2xl">
+            <div class="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
+                <span class="text-xl">🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search recipes..."
+                    class="w-full bg-transparent text-sm outline-none"
+                >
+            </div>
+        </div>
+
+        <!-- Category Buttons -->
+        <div class="mb-10 flex flex-wrap justify-center gap-3">
+            <button
+                class="categoryButton rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition hover:-translate-y-1"
+                data-category="all"
+            >
+                All Recipes
+            </button>
+
+            <button
+                class="categoryButton rounded-full bg-white px-5 py-2 text-sm font-semibold shadow-sm transition hover:-translate-y-1 hover:bg-orange-100"
+                data-category="breakfast"
+            >
+                Breakfast
+            </button>
+
+            <button
+                class="categoryButton rounded-full bg-white px-5 py-2 text-sm font-semibold shadow-sm transition hover:-translate-y-1 hover:bg-orange-100"
+                data-category="lunch"
+            >
+                Lunch
+            </button>
+
+            <button
+                class="categoryButton rounded-full bg-white px-5 py-2 text-sm font-semibold shadow-sm transition hover:-translate-y-1 hover:bg-orange-100"
+                data-category="dinner"
+            >
+                Dinner
+            </button>
+
+            <button
+                class="categoryButton rounded-full bg-white px-5 py-2 text-sm font-semibold shadow-sm transition hover:-translate-y-1 hover:bg-orange-100"
+                data-category="dessert"
+            >
+                Dessert
+            </button>
+        </div>
+
+        <!-- Recipe Cards -->
+        <div
+            id="recipeContainer"
+            class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3"
+        ></div>
+
+        <!-- Empty Result -->
+        <div
+            id="emptyMessage"
+            class="hidden py-16 text-center"
+        >
+            <div class="text-5xl">🍽️</div>
+
+            <h3 class="mt-4 text-2xl font-bold">
+                No recipes found
+            </h3>
+
+            <p class="mt-2 text-slate-500">
+                Try another recipe name or category.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Recipe Modal -->
+    <div
+        id="recipeModal"
+        class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/70 px-5 py-8"
+    >
+
+        <div
+            class="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl bg-white shadow-2xl"
+        >
+
+            <div class="relative">
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="Recipe image"
+                    class="h-64 w-full object-cover"
+                >
+
+                <button
+                    id="closeModal"
+                    class="absolute right-4 top-4 rounded-full bg-white px-4 py-2 text-xl font-bold text-slate-800 shadow-lg transition hover:bg-orange-500 hover:text-white"
+                    aria-label="Close recipe"
+                >
+                    
+                </button>
+            </div>
+
+            <div class="p-7">
+
+                <span
+                    id="modalCategory"
+                    class="rounded-full bg-orange-100 px-3 py-1 text-xs font-bold uppercase text-orange-600"
+                ></span>
+
+                <h2
+                    id="modalTitle"
+                    class="mt-4 text-3xl font-extrabold"
+                ></h2>
+
+                <p
+                    id="modalDescription"
+                    class="mt-3 leading-7 text-slate-500"
+                ></p>
+
+                <div class="mt-6 grid grid-cols-3 gap-3">
+                    <div class="rounded-xl bg-slate-100 p-4 text-center">
+                        <p class="text-xl">⏱️</p>
+                        <p class="mt-1 text-xs text-slate-500">Time</p>
+                        <p id="modalTime" class="font-bold"></p>
+                    </div>
+
+                    <div class="rounded-xl bg-slate-100 p-4 text-center">
+                        <p class="text-xl">🔥</p>
+                        <p class="mt-1 text-xs text-slate-500">Difficulty</p>
+                        <p id="modalDifficulty" class="font-bold"></p>
+                    </div>
+
+                    <div class="rounded-xl bg-slate-100 p-4 text-center">
+                        <p class="text-xl">🍴</p>
+                        <p class="mt-1 text-xs text-slate-500">Servings</p>
+                        <p id="modalServings" class="font-bold"></p>
+                    </div>
+                </div>
+
+                <h3 class="mt-8 text-xl font-bold">
+                    Ingredients
+                </h3>
+
+                <ul
+                    id="modalIngredients"
+                    class="mt-4 list-inside list-disc space-y-2 text-slate-600"
+                ></ul>
+
+                <h3 class="mt-8 text-xl font-bold">
+                    Cooking Instructions
+                </h3>
+
+                <ol
+                    id="modalInstructions"
+                    class="mt-4 list-inside list-decimal space-y-3 text-slate-600"
+                ></ol>
+
+            </div>
+        </div>
+    </div>
+</main>
+    <!-- Footer -->
+  
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript -->
+  
+   <script src="../js/components.js"></script>
+   <script src="../js/main.js"></script>
+    <script src="../js/recipes.js"></script>
+   
+</body>
+</html>

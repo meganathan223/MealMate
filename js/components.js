@@ -1,4 +1,4 @@
-function loadComponent(elementId, filePath) {
+ function loadComponent(elementId, filePath) {
     fetch(filePath)
         .then(response => {
             if (!response.ok) throw new Error(`Failed to load ${filePath}`);
