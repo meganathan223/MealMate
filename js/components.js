@@ -6,6 +6,7 @@ function loadComponent(elementId, filePath) {
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
+            initializeMenu();
         })
         .catch(error => console.error(error));
 }
