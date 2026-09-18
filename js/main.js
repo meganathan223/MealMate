@@ -28,11 +28,11 @@ function initializeMenu() {
 
     allLinks.forEach(link => {
         // Get the link destination file name
-        const linkHref = link.getAttribute('href');
+        const linkHref = link.getAttribute('href').split('/').pop();
 
         if (linkHref === currentPage) {
             // Add the active color class
-            link.classList.add('text-orange-500');
+            link.classList.add('text-sky-400');
         }
     });
 }
