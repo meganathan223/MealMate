@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <title>Meal Planner | MealMate</title>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- ================= HERO ================= -->
+    <section>
+      <img
+        src="../assets/images/hero_img.png"
+        alt="Meal Planner"
+        class="w-full max-w-full h-auto"
+      />
+    </section>
+
+    <!-- ================= DATE SELECTION ================= -->
+    <section
+      class="week-selector p-6 flex flex-col items-center text-center gap-4"
+    >
+      <h1 class="text-xl">📅 Choose your planning date</h1>
+
+      <input
+        id="planning-date"
+        type="date"
+        class="p-3 border-2 border-blue-500 rounded-2xl"
+      />
+    </section>
+
+    <!-- ================= WEEK NAVIGATION ================= -->
+    <section
+      id="week-navigation"
+      class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 p-4"
+    >
+      <button
+        id="prev-btn"
+        class="px-5 py-3 border-2 border-black rounded-2xl hover:cursor-pointer"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <p id="week-range" class="text-sm sm:text-lg text-center">Week of Sep 17 – Sep 23</p>
+
+      <button
+        id="next-btn"
+        class="px-5 py-3 border-2 border-black rounded-2xl hover:cursor-pointer"
+      >
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </section>
+
+    <!-- ================= 7 DAY PLANNER ================= -->
+    <!-- Hidden initially. JavaScript will show this after date selection -->
+    <section id="day-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4 px-4">
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Monday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Monday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Monday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Tuesday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Tuesday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Tuesday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Wednesday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Wednesday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Wednesday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Thursday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Thursday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Thursday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Friday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Friday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Friday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Saturday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Saturday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Saturday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="day-card p-4 border rounded-2xl overflow-hidden space-y-2 text-center"
+      >
+        <div class="day-header p-4 bg-blue-300 rounded-2xl text-center">
+          <h1 class="day-name font-bold">Monday</h1>
+          <div class="flex text-center justify-center gap-1">
+            <h3 class="day-date">17</h3>
+            <h3 class="day-month">sept</h3>
+          </div>
+        </div>
+        <div class="meals space-y-4">
+          <div class="meals-breakfast">
+            <p class="font-bold">🍳 Breakfast</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Sunday"
+              data-meal="Breakfast"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-lunch">
+            <p class="font-bold">🍛 Lunch</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Sunday"
+              data-meal="Lunch"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+          <div class="meals-dinner">
+            <p class="font-bold">🍽️ Dinner</p>
+            <button
+              class="add-meal-btn border rounded-2xl px-1.5 py-1.5 hover:cursor-pointer"
+              data-day="Sunday"
+              data-meal="Dinner"
+            >
+              <i class="fa-solid fa-plus"></i>Add Meal
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= RECIPE SELECTION POPUP ================= -->
+
+    <section
+      id="recipe-modal"
+      class="fixed inset-0 w-full h-screen flex items-center justify-center bg-black/50"
+      hidden
+    >
+      <div
+        class="modal-content bg-white p-3 sm:p-4 w-[95%] sm:w-3xl rounded-2xl space-y-4 max-h-[90vh] overflow-hidden"
+      >
+        <div class="modal-header flex justify-between items-center">
+          <h3 class="modal-title text-3xl font-bold">Choose your Meal</h3>
+          <button class="close-modal-btn cursor-pointer">X</button>
+        </div>
+        <div class="recipe-search">
+          <input
+            type="text"
+            placeholder="Search for food"
+            id="recipe-search-input"
+            class="border rounded-2xl p-2 w-full"
+          />
+        </div>
+        <div id="recipe-list" class="max-h-[70vh] overflow-y-auto">
+          <!-- <div
+           class="recipe-item flex flex-col sm:flex-row items-center justify-between gap-3 p-3 border rounded-xl mt-4 w-full"
+          >
+            <img
+              src="../assets/images/recipes/chicken-biryani.jpg"
+              class="recipe-image w-full sm:w-40 h-32 rounded-lg bg-gray-200 object-cover"
+            />
+            <div class="recipe-info flex-1 sm:ml-4 text-center sm:text-left">
+              <p class="recipe-name font-bold text-lg sm:text-2xl">recipe-name</p>
+              <p class="recipe-details font-light text-sm sm:text-xl mt-2 text-gray-700">
+                🍽️ Dinner · ⏱️ 35 min · 👥 2 servings
+              </p>
+            </div>
+            <button class="select-recipe-btn border rounded-2xl px-2.5 py-1.5">
+              Add
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BOTTOM MESSAGE ================= -->
+    <section class="text-center p-10">
+      <h2 class="text-2xl font-bold">Good food. Better days.</h2>
+
+      <p class="mt-2">A little planning goes a long way!</p>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <div id="footer-placeholder"></div>
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <!-- Recipe data -->
+    <script src="../data/recipes.js"></script>
+
+    <!-- Components -->
+    <script src="../js/components.js"></script>
+
+    <!-- Meal planner JavaScript -->
+    <script src="../js/meal-planner.js"></script>
+  </body>
+</html>
