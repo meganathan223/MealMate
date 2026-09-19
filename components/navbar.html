@@ -1,7 +1,45 @@
-<nav class="navbar">
-    <div class="logo">MealMate</div>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Receipes</a></li>
-    </ul>
-</nav>
+<!-- Navbar -->
+<header class="sticky top-0 z-50 border-b bg-secondary text-slate-200 border-t border-slate-900 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+
+        <a href="index.html" class="text-2xl font-extrabold text-white">
+            🍜 Meal<span class="text-sky-400">Mate</span>
+        </a>
+
+        <nav class="hidden gap-7 text-sm font-semibold md:flex">
+            <a href="index.html" class="transition hover:text-slate-500"><i class="fa-regular fa-house"></i>
+                Home</a>
+            <a href="pages/recipes.html" class="transition hover:text-slate-500"><i class="fa-solid fa-utensils"></i>
+                Recipes</a>
+            <a href="pages/meal-planner.html" class="transition hover:text-slate-500"><i
+                    class="fa-regular fa-calendar-days"></i> Meal Planner</a>
+            <a href="pages/favorites.html" class="transition hover:text-slate-500"><i class="fa-solid fa-heart"></i>
+                Favorites</a>
+            <a href="pages/about.html" class="transition hover:text-slate-500"><i class="fa-solid fa-users"></i> About
+                Us</a>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden absolute top-0 right-0 z-50 w-48 border border-sky-400 bg-slate-900 px-5 py-6 shadow-lg rounded-bl-lg md:hidden">
+
+            <button id="closeButton" class="absolute top-3 right-4 text-xl text-slate-500 hover:text-slate-800"
+                aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex flex-col gap-6 text-sm font-semibold">
+                <a href="index.html">Home</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="meal-planner.html">Meal Planner</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="about.html"> About Us</a>
+            </div>
+        </div>
+        <button id="menuButton" class="rounded-lg border border-slate-300 px-3 py-2 text-xl md:hidden"
+            aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>

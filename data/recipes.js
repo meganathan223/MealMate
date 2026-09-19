@@ -232,5 +232,144 @@ const recipes = [
             "Blend until smooth",
             "Serve chilled"
         ]
+    },
+
+    {
+        id: 11,
+        title: "Chocolate Brownie",
+        category: "Dessert",
+        difficulty: "Medium",
+        time: 40,
+        servings: 4,
+        image: "chocolate-brownie.jpg",
+        ingredients: [
+            "1 cup flour",
+            "1/2 cup cocoa powder",
+            "1 cup sugar",
+            "2 eggs",
+            "100g butter"
+        ],
+        steps: [
+            "Mix flour and cocoa powder",
+            "Add sugar, eggs and butter",
+            "Pour into a baking tray",
+            "Bake for 30 minutes"
+        ]
+    },
+
+    {
+        id: 12,
+        title: "Grilled Salmon",
+        category: "Dinner",
+        difficulty: "Medium",
+        time: 25,
+        servings: 2,
+        image: "grilled-salmon.jpg",
+        ingredients: [
+            "2 salmon fillets",
+            "1 tbsp olive oil",
+            "1 lemon",
+            "Salt",
+            "Black pepper"
+        ],
+        steps: [
+            "Season the salmon",
+            "Heat a grill pan",
+            "Grill both sides",
+            "Add lemon juice and serve"
+        ]
+    },
+
+    {
+        id: 13,
+        title: "Avocado Toast",
+        category: "Breakfast",
+        difficulty: "Easy",
+        time: 10,
+        servings: 1,
+        image: "avocado-toast.jpg",
+        ingredients: [
+            "2 bread slices",
+            "1 avocado",
+            "Salt",
+            "Black pepper",
+            "1/2 lemon"
+        ],
+        steps: [
+            "Toast the bread",
+            "Mash the avocado",
+            "Add lemon juice and seasoning",
+            "Spread over toast"
+        ]
+    },
+
+    {
+        id: 14,
+        title: "Healthy Quinoa Salad",
+        category: "Healthy",
+        difficulty: "Easy",
+        time: 20,
+        servings: 2,
+        image: "quinoa-salad.jpg",
+        ingredients: [
+            "1 cup cooked quinoa",
+            "1 cucumber",
+            "1 tomato",
+            "Sweet corn",
+            "Lemon juice"
+        ],
+        steps: [
+            "Cook the quinoa",
+            "Chop the vegetables",
+            "Add everything to a bowl",
+            "Mix with lemon juice and serve"
+        ]
+    },
+
+    {
+        id: 15,
+        title: "Chicken Curry",
+        category: "Lunch",
+        difficulty: "Medium",
+        time: 45,
+        servings: 4,
+        image: "chicken-curry.jpg",
+        ingredients: [
+            "500g chicken",
+            "2 onions",
+            "2 tomatoes",
+            "1 tbsp ginger garlic paste",
+            "Curry spices"
+        ],
+        steps: [
+            "Cook onions until golden",
+            "Add ginger garlic paste",
+            "Add tomatoes and spices",
+            "Add chicken and cook until done"
+        ]
+    },
+
+    {
+        id: 16,
+        title: "Vegetable Stir Fry",
+        category: "Lunch",
+        difficulty: "Easy",
+        time: 20,
+        servings: 2,
+        image: "vegetable-stir-fry.jpg",
+        ingredients: [
+            "1 carrot",
+            "1 bell pepper",
+            "1 cup broccoli",
+            "1 onion",
+            "2 tbsp soy sauce"
+        ],
+        steps: [
+            "Chop all vegetables",
+            "Heat oil in a pan",
+            "Stir fry the vegetables",
+            "Add soy sauce and serve"
+        ]
     }
+
 ];
