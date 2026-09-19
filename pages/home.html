@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MealMate - Home</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Project CSS -->
+    <link href="../src/output.css" rel="stylesheet">
+    <link href="../src/main.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <div id="navbar-placeholder"></div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO SECTION
+             ================================================= -->
+
+        <section class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-blue-100">
+
+            <!-- Decorative background circles -->
+            <div class="absolute -left-20 top-10 h-64 w-64 rounded-full bg-sky-200/30 blur-3xl">
+            </div>
+
+            <div class="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-blue-200/30 blur-3xl">
+            </div>
+
+
+            <div class="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-14 md:grid-cols-2 md:py-20">
+
+
+                <!-- =========================
+                     HERO LEFT SIDE
+                     ========================= -->
+
+                <div class="z-10">
+
+                    <!-- Small welcome badge -->
+
+                    <div
+                        class="mb-5 inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <span>Welcome to MealMate</span>
+
+                    </div>
+
+
+                    <!-- Main heading -->
+
+                    <h1 class="max-w-xl text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl md:text-6xl">
+
+                        Cook.
+                        <span class="text-sky-600">Plan.</span>
+                        Enjoy.
+
+                    </h1>
+
+
+                    <!-- Description -->
+
+                    <p class="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
+
+                        Delicious meals made simple.
+                        Discover easy recipes, plan your meals,
+                        and make every bite count.
+
+                    </p>
+
+
+                    <!-- Hero buttons -->
+
+                    <div class="mt-8 flex flex-wrap gap-4">
+
+
+                        <!-- Explore Recipes -->
+
+                        <a href="recipes.html"
+                            class="group inline-flex items-center gap-2 rounded-xl bg-sky-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-sky-600/20 transition duration-300 hover:-translate-y-1 hover:bg-sky-700 hover:shadow-xl">
+
+                            <i class="fa-solid fa-magnifying-glass transition group-hover:rotate-12"></i>
+
+                            Explore Recipes
+
+                            <i
+                                class="fa-solid fa-arrow-right text-sm transition duration-300 group-hover:translate-x-1">
+                            </i>
+
+                        </a>
+
+
+                        <!-- Plan Meals -->
+
+                        <a href="#meal-planner"
+                            class="group inline-flex items-center gap-2 rounded-xl border-2 border-sky-300 bg-white px-6 py-3 font-semibold text-sky-700 transition duration-300 hover:-translate-y-1 hover:border-sky-500 hover:bg-sky-50">
+
+                            <i class="fa-regular fa-calendar-days"></i>
+
+                            Plan Your Meals
+
+                            <i
+                                class="fa-solid fa-arrow-right text-sm transition duration-300 group-hover:translate-x-1">
+                            </i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Small information -->
+
+                    <div class="mt-8 flex flex-wrap gap-6 text-sm text-slate-500">
+
+                        <div class="flex items-center gap-2">
+
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+
+                            Easy Recipes
+
+                        </div>
+
+
+                        <div class="flex items-center gap-2">
+
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+
+                            Weekly Planning
+
+                        </div>
+
+
+                        <div class="flex items-center gap-2">
+
+                            <i class="fa-solid fa-circle-check text-green-500"></i>
+
+                            Save Favorites
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     HERO RIGHT SIDE
+                     ========================= -->
+
+                <div class="relative">
+
+
+                    <!-- Main image -->
+
+                    <div class="relative overflow-hidden rounded-[2rem] shadow-2xl shadow-sky-900/10">
+
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1200&q=85"
+                            alt="Healthy food bowl"
+                            class="h-[320px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[400px] md:h-[470px]">
+
+                    </div>
+
+
+                    <!-- Floating message -->
+
+                    <div
+                        class="absolute right-3 top-6 rounded-2xl bg-white/95 px-4 py-3 text-center shadow-xl backdrop-blur sm:right-6">
+
+                        <div class="text-xl">🥗</div>
+
+                        <p class="text-sm font-bold text-slate-800">
+                            Good Food
+                        </p>
+
+                        <p class="text-xs text-slate-500">
+                            Happy Life
+                        </p>
+
+                    </div>
+
+
+                    <!-- Floating leaf -->
+
+                    <div
+                        class="absolute -bottom-5 -left-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-2xl text-green-600 shadow-lg sm:-left-6">
+
+                        🌿
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             POPULAR CATEGORIES
+             ================================================= -->
+
+        <section class="bg-white px-5 py-14">
+
+            <div class="mx-auto max-w-7xl">
+
+
+                <!-- Section heading -->
+
+                <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+
+                    <div>
+
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
+
+                            Browse By Category
+
+                        </p>
+
+
+                        <h2 class="text-3xl font-extrabold text-slate-900 md:text-4xl">
+
+                            Popular Categories
+
+                        </h2>
+
+
+                        <p class="mt-2 text-sm text-slate-500">
+
+                            Find recipes for every craving and occasion.
+
+                        </p>
+
+                    </div>
+
+
+                    <a href="recipes.html"
+                        class="group flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700">
+
+                        View All Categories
+
+                        <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1">
+                        </i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Category cards -->
+
+                <div class="grid gap-20 left-10 sm:grid-cols-2 lg:grid-cols-5">
+
+
+                    <!-- Breakfast -->
+
+                    <a href="recipes.html"
+                        class="group rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-xl">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-2xl text-orange-600 transition duration-300 group-hover:scale-110">
+
+                            <i class="fa-solid fa-pancakes"></i>
+
+                        </div>
+
+                        <h3 class="mt-4 font-bold text-slate-800">
+                            Breakfast
+                        </h3>
+
+                        <p class="mt-2 text-xs text-slate-500">
+                            Start your day right
+                        </p>
+
+                    </a>
+
+
+                    <!-- Lunch -->
+
+                    <a href="recipes.html"
+                        class="group rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-xl">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-pink-100 text-2xl text-pink-600 transition duration-300 group-hover:scale-110">
+
+                            <i class="fa-solid fa-bowl-food"></i>
+
+                        </div>
+
+                        <h3 class="mt-4 font-bold text-slate-800">
+                            Lunch
+                        </h3>
+
+                        <p class="mt-2 text-xs text-slate-500">
+                            Quick & tasty
+                        </p>
+
+                    </a>
+
+
+                    <!-- Dinner -->
+
+                    <a href="recipes.html"
+                        class="group rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-xl">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-100 text-2xl text-sky-600 transition duration-300 group-hover:scale-110">
+
+                            <i class="fa-solid fa-utensils"></i>
+
+                        </div>
+
+                        <h3 class="mt-4 font-bold text-slate-800">
+                            Dinner
+                        </h3>
+
+                        <p class="mt-2 text-xs text-slate-500">
+                            Comforting meals
+                        </p>
+
+                    </a>
+
+
+
+
+
+                    <!-- Dessert -->
+
+                    <a href="recipes.html"
+                        class="group rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:bg-white hover:shadow-xl">
+
+                        <div
+                            class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 text-2xl text-purple-600 transition duration-300 group-hover:scale-110">
+
+                            <i class="fa-solid fa-cake-candles"></i>
+
+                        </div>
+
+                        <h3 class="mt-4 font-bold text-slate-800">
+                            Dessert
+                        </h3>
+
+                        <p class="mt-2 text-xs text-slate-500">
+                            Sweet moments
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURED RECIPES
+             ================================================= -->
+
+        <section class="bg-slate-50 px-5 py-14">
+
+            <div class="mx-auto max-w-7xl">
+
+
+                <!-- Heading -->
+
+                <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+
+                    <div>
+
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
+
+                            Featured Recipes
+
+                        </p>
+
+
+                        <h2 class="text-3xl font-extrabold text-slate-900 md:text-4xl">
+
+                            Tried & Loved
+
+                        </h2>
+
+
+                        <p class="mt-2 text-sm text-slate-500">
+
+                            Handpicked recipes that our community loves.
+
+                        </p>
+
+                    </div>
+
+
+                    <a href="recipes.html"
+                        class="group flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700">
+
+                        View All Recipes
+
+                        <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1">
+                        </i>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- Recipe cards -->
+
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+
+                    <!-- Card 1 -->
+
+                    <article
+                        class="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="relative overflow-hidden">
+
+                            <img src="../assets/images/recipes/chicken-pasta.jpg" alt="Chicken Pasta"
+                                class="h-52 w-full object-cover transition duration-700 group-hover:scale-110">
+
+                            <button
+                                class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-red-500 shadow-md transition hover:scale-110">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-slate-800">
+                                Chicken Pasta
+                            </h3>
+
+
+                            <div class="mt-3 flex items-center gap-4 text-xs text-slate-500">
+
+                                <span>
+                                    <i class="fa-regular fa-clock mr-1"></i>
+                                    30 mins
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-hat-chef mr-1"></i>
+                                    Easy
+                                </span>
+
+                            </div>
+
+
+                            <a href="recipes.html"
+                                class="mt-4 inline-flex items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-sky-700">
+
+                                View Recipe
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 2 -->
+
+                    <article
+                        class="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="relative overflow-hidden">
+
+                            <img src="../assets/images/recipes/grilled-salmon.jpg" alt="Grilled Salmon"
+                                class="h-52 w-full object-cover transition duration-700 group-hover:scale-110">
+                            <button
+                                class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-red-500 shadow-md transition hover:scale-110">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-slate-800">
+                                Grilled Salmon
+                            </h3>
+
+
+                            <div class="mt-3 flex items-center gap-4 text-xs text-slate-500">
+
+                                <span>
+                                    <i class="fa-regular fa-clock mr-1"></i>
+                                    25 mins
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-fire mr-1"></i>
+                                    Hard
+                                </span>
+
+                            </div>
+
+
+                            <a href="recipes.html"
+                                class="mt-4 inline-flex items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-sky-700">
+
+                                View Recipe
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 3 -->
+
+                    <article
+                        class="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="relative overflow-hidden">
+
+                            <img src="../assets/images/recipes/vegetable-soup.jpg" alt="Vegetable Soup"
+                                class="h-52 w-full object-cover transition duration-700 group-hover:scale-110"> <button
+                                class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-red-500 shadow-md transition hover:scale-110">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-slate-800">
+                                vegetable Soup
+                            </h3>
+
+
+                            <div class="mt-3 flex items-center gap-4 text-xs text-slate-500">
+
+                                <span>
+                                    <i class="fa-regular fa-clock mr-1"></i>
+                                    35 mins
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-fire mr-1"></i>
+                                    Medium
+                                </span>
+
+                            </div>
+
+
+                            <a href="recipes.html"
+                                class="mt-4 inline-flex items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-sky-700">
+
+                                View Recipe
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Card 4 -->
+
+                    <article
+                        class="group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+
+                        <div class="relative overflow-hidden">
+
+                            <img src="../assets/images/recipes/chocolate-brownie.jpg" alt="Chocolate Brownies"
+                                class="h-52 w-full object-cover transition duration-700 group-hover:scale-110">
+
+                            <button
+                                class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-red-500 shadow-md transition hover:scale-110">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="p-5">
+
+                            <h3 class="font-bold text-slate-800">
+                                Chocolate Brownies
+                            </h3>
+
+
+                            <div class="mt-3 flex items-center gap-4 text-xs text-slate-500">
+
+                                <span>
+                                    <i class="fa-regular fa-clock mr-1"></i>
+                                    45 mins
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-fire mr-1"></i>
+                                    Medium
+                                </span>
+
+                            </div>
+
+
+                            <a href="recipes.html"
+                                class="mt-4 inline-flex items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-sky-700">
+
+                                View Recipe
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WHY CHOOSE MEALMATE
+             ================================================= -->
+
+        <section class="bg-gradient-to-b from-sky-50 to-white px-5 py-16">
+
+            <div class="mx-auto max-w-7xl">
+
+
+                <div class="grid items-center gap-10 lg:grid-cols-2">
+
+
+                    <!-- Left -->
+
+                    <div>
+
+                        <p class="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-sky-600">
+
+                            Why Choose MealMate?
+
+                        </p>
+
+
+                        <h2 class="text-3xl font-extrabold text-slate-900 md:text-4xl">
+
+                            More Than Just Recipes
+
+                        </h2>
+
+
+                        <p class="mt-4 max-w-xl leading-7 text-slate-600">
+
+                            We make cooking easier, healthier and more enjoyable
+                            with tools designed for you.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Right features -->
+
+                    <div class="grid gap-5 sm:grid-cols-3">
+
+
+                        <!-- Feature 1 -->
+
+                        <div class="group text-center transition duration-300 hover:-translate-y-2">
+
+                            <div
+                                class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-2xl text-green-600 shadow-sm transition group-hover:scale-110">
+
+                                <i class="fa-solid fa-leaf"></i>
+
+                            </div>
+
+
+                            <h3 class="mt-4 font-bold text-slate-800">
+                                Discover New Recipes
+                            </h3>
+
+
+                            <p class="mt-2 text-xs leading-5 text-slate-500">
+                                Explore thousands of tasty and easy recipes.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Feature 2 -->
+
+                        <div
+                            class="group border-y border-slate-200 py-5 text-center transition duration-300 hover:-translate-y-2 sm:border-x sm:border-y-0 sm:px-5">
+
+                            <div
+                                class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 text-2xl text-purple-600 shadow-sm transition group-hover:scale-110">
+
+                                <i class="fa-regular fa-calendar-days"></i>
+
+                            </div>
+
+
+                            <h3 class="mt-4 font-bold text-slate-800">
+                                Plan Your Meals
+                            </h3>
+
+
+                            <p class="mt-2 text-xs leading-5 text-slate-500">
+                                Save time and eat better every week.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Feature 3 -->
+
+                        <div class="group text-center transition duration-300 hover:-translate-y-2">
+
+                            <div
+                                class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 text-2xl text-red-500 shadow-sm transition group-hover:scale-110">
+
+                                <i class="fa-solid fa-heart"></i>
+
+                            </div>
+
+
+                            <h3 class="mt-4 font-bold text-slate-800">
+                                Save Favorites
+                            </h3>
+
+
+                            <p class="mt-2 text-xs leading-5 text-slate-500">
+                                Keep your top recipes just a click away.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PLAN YOUR WEEK BANNER
+             ================================================= -->
+
+        <section id="meal-planner" class="px-5 pb-16">
+
+            <div
+                class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-sky-900 to-blue-700 shadow-xl">
+
+
+                <!-- Decorative circle -->
+
+                <div class="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-sky-400/20">
+                </div>
+
+
+                <div class="absolute -bottom-24 left-10 h-52 w-52 rounded-full bg-blue-400/20">
+                </div>
+
+
+                <div class="relative grid items-center gap-8 px-7 py-10 md:grid-cols-[1fr_auto] md:px-12">
+
+
+                    <!-- Text -->
+
+                    <div class="text-white">
+
+                        <p class="text-xs font-bold uppercase tracking-[0.2em] text-sky-200">
+
+                            Start Your Food Journey
+
+                        </p>
+
+
+                        <h2 class="mt-2 text-3xl font-extrabold md:text-4xl">
+                            Plan Your Week
+                        </h2>
+
+
+                        <p class="mt-3 max-w-xl text-sm leading-6 text-sky-100">
+
+                            Make your week easier with smart meal planning
+                            and delicious recipes.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- Button -->
+
+                    <a href="#meal-planner"
+                        class="group inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 font-semibold text-sky-800 shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-sky-50">
+
+                        <i class="fa-regular fa-calendar-days"></i>
+
+                        Start Planning
+
+                        <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1">
+                        </i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <div id="footer-placeholder"></div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="../js/components.js"></script>
+
+    <script src="../js/main.js"></script>
+
+
+</body>
+
+</html>
