@@ -1,5 +1,6 @@
 console.log(recipes);
 //DATE SELECTION
+
 let planningDate = document.getElementById("planning-date");
 console.log(planningDate);
 
@@ -133,6 +134,11 @@ addMealBtn.forEach((element) => {
   element.addEventListener("click", function () {
     console.log("CLICKED");
 
+    if (!currentDate) {
+      alert("Please select a date first");
+      return;
+    }
+
     selectedDay = element.dataset.day;
 
     selectedMeal = element.dataset.meal;
@@ -204,7 +210,8 @@ selectedRecipeBtn.forEach((element) => {
 
     dayCards.forEach((card) => {
       let button = card.querySelector(
-        `.add-meal-btn[data-day="${selectedDay}"][data-meal="${selectedMeal}"]`,
+        `.add-meal-btn[data-day="${selectedDay}"][data-meal="${selectedMeal}"],
+   .change-meal-btn[data-day="${selectedDay}"][data-meal="${selectedMeal}"]`,
       );
 
       if (button) {
@@ -238,7 +245,7 @@ selectedRecipeBtn.forEach((element) => {
 
 
         <button
-    class="change-meal-btn border rounded-2xl px-2 py-1 mt-2 text-red-500"
+    class="change-meal-btn border rounded-2xl px-2 py-1 mt-2 text-red-500 cursor-pointer"
     data-day="${selectedDay}"
     data-meal="${selectedMeal}">
     Change
