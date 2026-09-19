@@ -907,44 +907,74 @@ function displayRecipes(recipeList) {
     emptyMessage.classList.add("hidden");
 
     recipeList.forEach(function (recipe) {
+
         const recipeCard = document.createElement("article");
 
         recipeCard.className =
-            "group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-2xl";
+            "group overflow-hidden rounded-3xl border border-slate-700 bg-slate-900 shadow-lg transition duration-500 hover:-translate-y-2 hover:border-sky-400 hover:shadow-2xl hover:shadow-sky-500/10";
 
         recipeCard.innerHTML = `
+
+            <!-- Recipe Image -->
             <div class="relative overflow-hidden">
+
                 <img
                     src="${recipe.image}"
                     alt="${recipe.title}"
                     class="h-56 w-full object-cover transition duration-700 group-hover:scale-110"
                 >
 
-                <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase text-orange-600 shadow">
+                <!-- Category -->
+                <span
+                    class="absolute left-4 top-4 rounded-full bg-slate-900/90 px-3 py-1 text-xs font-bold uppercase text-sky-400 shadow-lg backdrop-blur">
                     ${recipe.category}
                 </span>
+
             </div>
 
+
+            <!-- Recipe Content -->
             <div class="p-6">
 
-                <div class="mb-3 flex items-center justify-between text-xs font-semibold text-slate-500">
-                    <span>⏱️ ${recipe.time}</span>
-                    <span>🔥 ${recipe.difficulty}</span>
+                <!-- Time & Difficulty -->
+                <div
+                    class="mb-3 flex items-center justify-between text-xs font-semibold text-slate-400">
+
+                    <span>
+                        ⏱️ ${recipe.time}
+                    </span>
+
+                    <span>
+                        🔥 ${recipe.difficulty}
+                    </span>
+
                 </div>
 
-                <h3 class="text-xl font-extrabold">
+
+                <!-- Title -->
+                <h3 class="text-xl font-extrabold text-white transition group-hover:text-sky-400">
+
                     ${recipe.title}
+
                 </h3>
 
-                <p class="mt-3 line-clamp-3 text-sm leading-6 text-slate-500">
+
+                <!-- Description -->
+                <p
+                    class="mt-3 line-clamp-3 text-sm leading-6 text-slate-400">
+
                     ${recipe.description}
+
                 </p>
 
+
+                <!-- View Recipe Button -->
                 <button
-                    class="viewRecipeButton mt-6 w-full rounded-full bg-orange-500 px-5 py-3 text-sm font-bold text-white transition hover:bg-orange-600"
-                    data-id="${recipe.id}"
-                >
+                    class="viewRecipeButton mt-6 w-full rounded-full bg-sky-500 px-5 py-3 text-sm font-bold text-white transition duration-300 hover:bg-sky-400 hover:shadow-lg hover:shadow-sky-500/30"
+                    data-id="${recipe.id}">
+
                     View Recipe
+
                 </button>
 
             </div>
@@ -953,15 +983,24 @@ function displayRecipes(recipeList) {
         recipeContainer.appendChild(recipeCard);
     });
 
-    const viewButtons = document.querySelectorAll(".viewRecipeButton");
 
-    viewButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const recipeId = Number(button.dataset.id);
-            openRecipeModal(recipeId);
-        });
+    // View Recipe Buttons
+ const viewButtons = document.querySelectorAll(".viewRecipeButton");
+
+viewButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const recipeId = Number(button.dataset.id);
+
+        window.location.href = `recipe-details.html?id=${recipeId}`;
+
     });
+
+});
 }
+
+
 
 
 // ===============================
@@ -993,20 +1032,53 @@ function filterRecipes() {
 // ===============================
 
 categoryButtons.forEach(function (button) {
+
     button.addEventListener("click", function () {
+
         selectedCategory = button.dataset.category;
 
+        // Reset all buttons
         categoryButtons.forEach(function (item) {
-            item.classList.remove("bg-orange-500", "text-white");
-            item.classList.add("bg-white", "text-slate-800");
+
+            item.classList.remove(
+                "bg-sky-500",
+                "text-white",
+                "shadow-lg",
+                "shadow-sky-500/20"
+            );
+
+            item.classList.add(
+                "bg-slate-900",
+                "text-slate-300",
+                "border",
+                "border-slate-700"
+            );
+
         });
 
-        button.classList.remove("bg-white", "text-slate-800");
-        button.classList.add("bg-orange-500", "text-white");
+
+        // Active button
+        button.classList.remove(
+            "bg-slate-900",
+            "text-slate-300",
+            "border-slate-700"
+        );
+
+        button.classList.add(
+            "bg-sky-500",
+            "text-white",
+            "shadow-lg",
+            "shadow-sky-500/20"
+        );
+
 
         filterRecipes();
+
     });
+
 });
+
+
 
 if (searchInput) {
     searchInput.addEventListener("input", filterRecipes);

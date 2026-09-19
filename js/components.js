@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- function loadComponent(elementId, filePath) {
-=======
 function loadComponent(elementId, filePath, isInPagesFolder) {
->>>>>>> 8422e390cba49f51e9c637c670db6c66a2248718
     fetch(filePath)
         .then(response => {
             if (!response.ok) throw new Error(`Failed to load ${filePath}`);
@@ -38,11 +34,6 @@ function loadComponent(elementId, filePath, isInPagesFolder) {
 
 // Load components when the DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
-    loadComponent("navbar-placeholder", "components/navbar.html");
-    loadComponent("footer-placeholder", "components/footer.html");
-});
-=======
     // Check if the current URL contains the "/pages/" folder
     const isInPagesFolder = window.location.pathname.includes('/pages/');
 
@@ -53,4 +44,3 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("navbar-placeholder", navbarPath, isInPagesFolder);
     loadComponent("footer-placeholder", footerPath, isInPagesFolder);
 });
->>>>>>> 8422e390cba49f51e9c637c670db6c66a2248718
