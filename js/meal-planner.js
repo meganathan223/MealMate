@@ -171,7 +171,7 @@ recipes.forEach((element) => {
   div.innerHTML = `
     <div class="recipe-item flex items-center justify-between p-3 border rounded-xl mt-4 w-2xl">
         <img
-            src="../assets/images/recipes/${element.image}"
+            src="${element.image}"
             class="recipe-image w-40 h-32 rounded-lg bg-gray-200 object-cover"
         >
         <div class="recipe-info flex-1 ml-4">
@@ -235,7 +235,7 @@ selectedRecipeBtn.forEach((element) => {
       </p>
 
       <img
-        src="../assets/images/recipes/${selectedRecipe.image}"
+        src="${selectedRecipe.image}"
         class="w-full h-24 object-cover rounded-lg"
       >
 
